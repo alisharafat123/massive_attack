@@ -44,6 +44,7 @@ exports.register = function(req, res) {
                         'title': 'Successfully Registered.',
                         'user': ''
                     });
+                    return res.redirect('/login');
                 }
                 else {
                     res.render('register', {
@@ -98,18 +99,22 @@ exports.login = function(req, res) {
         });
 
         function auth( userRes ) {
-            if(!UserModel.encrypt(req.body.password) == userRes.password) {
+            console.log(userRes.password);
+            if(UserModel.encrypt(req.body.password) != userRes.password) {
                 res.render('login',
                     {
                         'invalid_email' : 'Invalid Email or and Password.'
                     });
             } else {
-                console.log(userRes._id);
+                var sess = req.session;
+                //console.log(userRes._id);
+                sess.email=req.body.email;
+                console.log(sess.email);
                 user.update({_id : userRes._id}, {'$set' : {token : Date.now}});
                 if(userRes){
                     "use strict";
-                    res.render('dashboard', {
-                        'username' : 'Welcome '+userRes.name
+                    res.render('dashboard',{
+                        'username' : sess.email
                     });
                 }
             }

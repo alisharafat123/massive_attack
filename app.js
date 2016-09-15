@@ -19,6 +19,7 @@ mongoose.connect(url);
 var router = express.Router();
 var  expressValidator = require('express-validator');
 var ejs = require('ejs');
+var session = require('express-session');
 var fs = require('fs');
 var swig = require('swig');
 const util = require('util');
@@ -51,6 +52,7 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret: 'ssshhhhh'}));
 //app.use(express.bodyParser());
 
 /*app.set('view engine', 'ejs');
@@ -82,6 +84,8 @@ app.use(function(err, req, res, next) {
 
 // User
 app.use(bodyParser.urlencoded({ extended: true }));
+/*app.use(express.cookieParser('shhhh, very secret'));
+app.use(express.session());*/
 router.use(methodOverride(function(req, res){
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
         // look in urlencoded POST bodies and delete it
@@ -95,7 +99,24 @@ app.get('/', routes.index);
 app.get('/register', users.register);
 app.get('/login', users.login);
 app.get('/contact', routes.contact);
-app.get('/dashboard', routes.dashboard);
+var sess;
+
+app.get('/dashboard',function(req,res){
+    sess = req.session;
+//Session set when user Request our app via URL
+    if(sess.email) {
+        /*
+         * This line check Session existence.
+         * If it existed will do some action.
+         */
+        res.redirect('/dashboard');
+    }
+    else {
+        res.redirect('/login');
+    }
+});
+
+//app.get('/dashboard', routes.dashboard);
 //var u = new user();
 //console.log(u);
 //console.log(u['name']);

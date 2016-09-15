@@ -3,12 +3,11 @@
  */
 
 var express = require('express');
-var es6Renderer = require('express-es6-template-engine');
 var http = require('http');
 var path = require('path');
 var errorhandler = require('errorhandler');
 var mongodb = require('mongodb');
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 var bodyParser = require('body-parser');
 var users = require('./controllers/users_controller.js');
 var MongoClient = mongodb.MongoClient;
@@ -21,6 +20,7 @@ var router = express.Router();
 var  expressValidator = require('express-validator');
 var ejs = require('ejs');
 var fs = require('fs');
+var swig = require('swig');
 const util = require('util');
 var methodOverride = require('method-override');
 //var check = require('validator').check,
@@ -44,9 +44,12 @@ app.use(app.router);*/
 //app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'ejs');
 // app.set('views', path.join(__dirname , '/views'));
-app.engine('html', es6Renderer);
-app.set('views','views');
+var swig = new swig.Swig();
+app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
+//app.engine('html', cons.swig);
+app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.bodyParser());
 

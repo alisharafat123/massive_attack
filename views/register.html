@@ -36,15 +36,20 @@
                 <div id="register" class="animate form">
                     <form method="post" id="register_form" action="register"><!--action="<?php /*echo base_url();*/?>index.php/register/register_user" -->
                         <h1> Sign up </h1>
-                        <div class="alert alert-danger">{{error_email}} {{errors}}</div>
+                        {% if error_email %}
+                        <div class="alert alert-danger">{{error_email}}</div>
+                        {% endif %}
+                        {% for error in errors %}
+                        <div class="alert alert-danger">{{error.msg}}</div>
+                        {% endfor %}
                         <p>
                             <label for="Name" class="name" data-icon="u">Your username</label>
-                            <input id="namesignup" name="name" required="required" type="text" placeholder="Jack"/>
+                            <input id="namesignup" name="name"  type="text" placeholder="Jack"/>
                         <div class="wy-alert-danger" id="valid_error_name"></div>
                         </p>
                         <p>
                             <label for="User Name" class="uname" data-icon="u">Your username</label>
-                            <input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />
+                            <input id="usernamesignup" name="username"  type="text" placeholder="mysuperusername690" />
                         <div class="wy-alert-danger" id="valid_error_uname"></div>
                         </p>
                         <p>

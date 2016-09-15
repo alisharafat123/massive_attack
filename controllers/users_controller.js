@@ -14,7 +14,8 @@ exports.register = function(req, res) {
 
     if(req.method.toLowerCase() != "post") {
         res.render('register', {
-
+            'error_email': '',
+            'errors' : ''
         });
     }
     else {
@@ -55,11 +56,11 @@ exports.register = function(req, res) {
            // console.log(util.inspect(errors, false, null));
             //var json = JSON.parse(errors);
 
-            var erroros = errors[0]["msg"].toString();
-            console.log(erroros);
+            //var erroros = errors[0]["msg"].toString();
+            //console.log(erroros);
             res.render("register", {
                 message: '',
-                errors: erroros
+                errors: errors
             });
         /*for (var i = 0; i < errors.length; i++) {
 

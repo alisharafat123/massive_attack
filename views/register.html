@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+    <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+    <meta name="author" content="Codrops" />
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <script src="assets/js/ejs.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/handlebars-v4.0.5.js" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate-custom.css" />
+</head>
+<body class="reg_body">
+<!-- nav-->
+<header id="header">
+    <h1><a href="/">Massive</a> Attack</h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="register" class="button">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <!-- Codrops top bar -->
+    <section>
+        <div id="container_demo" >
+            <div id="wrapper">
+                <div id="register" class="animate form">
+                    <form method="post" id="register_form" action="register"><!--action="<?php /*echo base_url();*/?>index.php/register/register_user" -->
+                        <h1> Sign up </h1>
+                        <div class="alert alert-danger">{{error_email}} {{errors}}</div>
+                        <p>
+                            <label for="Name" class="name" data-icon="u">Your username</label>
+                            <input id="namesignup" name="name" required="required" type="text" placeholder="Jack"/>
+                        <div class="wy-alert-danger" id="valid_error_name"></div>
+                        </p>
+                        <p>
+                            <label for="User Name" class="uname" data-icon="u">Your username</label>
+                            <input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />
+                        <div class="wy-alert-danger" id="valid_error_uname"></div>
+                        </p>
+                        <p>
+                            <label for="Email" class="youmail" data-icon="e" > Your email</label>
+                            <!--<script type="text/javascript" src="validator.min.js"></script>-->
+                            <!--<script type="text/javascript">-->
+                                <!--validator.isEmail(email); //=> true-->
+                            <!--</script>-->
+                            <input id="emailsignup" name="email" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                        <div class="wy-alert-danger" id="valid_error_email"></div>
+                        </p>
+                        <p>
+                            <label for="Password" class="youpasswd" data-icon="p">Your password </label>
+                            <input id="passwordsignup" name="password" required="required" type="password"/>
+                        <div class="wy-alert-danger" id="valid_error_pass"></div>
+                        </p>
+                        <p>
+                            <label for="Confirm Password" class="youpasswd" data-icon="p">Please confirm your password </label>
+                            <input id="passwordsignup_confirm" name="password_confirm" required="required" type="password"/>
+                        <div class="wy-alert-danger" id="valid_error_pass_conf"></div>
+                        </p>
+                        <p class="signin button">
+                            <input type="submit" value="Sign up" name="submit"/>
+                        </p>
+                        <p class="change_link">
+                            Already a member ?
+                            <a href="login" class="to_register"> Go and log in </a>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/register.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollgress.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

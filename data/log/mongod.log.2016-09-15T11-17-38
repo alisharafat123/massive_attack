@@ -1,0 +1,42 @@
+2016-09-15T15:33:15.386+0500 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2016-09-15T15:33:15.389+0500 I STORAGE  [thread1] Service running
+2016-09-15T15:33:15.389+0500 I CONTROL  [initandlisten] MongoDB starting : pid=4260 port=27017 dbpath=E:\Sharafat\massive_attack\data\db 64-bit host=DESKTOP-DG5HRQH
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] db version v3.2.9
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] git version: 22ec9e93b40c85fc7cae7d56e7d6a02fd811088c
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] modules: none
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten] build environment:
+2016-09-15T15:33:15.390+0500 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2016-09-15T15:33:15.391+0500 I CONTROL  [initandlisten]     distarch: x86_64
+2016-09-15T15:33:15.391+0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-09-15T15:33:15.391+0500 I CONTROL  [initandlisten] options: { config: "C:\Program Files\MongoDB\mongod.cfg", service: true, storage: { dbPath: "E:\Sharafat\massive_attack\data\db" }, systemLog: { destination: "file", path: "E:\Sharafat\massive_attack\data\log\mongod.log" } }
+2016-09-15T15:33:15.396+0500 I -        [initandlisten] Detected data files in E:\Sharafat\massive_attack\data\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-09-15T15:33:15.397+0500 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-09-15T15:33:16.787+0500 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-09-15T15:33:16.787+0500 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'E:/Sharafat/massive_attack/data/db/diagnostic.data'
+2016-09-15T15:33:16.805+0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-09-15T15:33:30.713+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62434 #1 (1 connection now open)
+2016-09-15T15:42:08.880+0500 I NETWORK  [conn1] end connection 127.0.0.1:62434 (0 connections now open)
+2016-09-15T15:42:12.400+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62629 #2 (1 connection now open)
+2016-09-15T15:46:06.565+0500 I NETWORK  [conn2] end connection 127.0.0.1:62629 (0 connections now open)
+2016-09-15T15:46:12.043+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62704 #3 (1 connection now open)
+2016-09-15T15:46:55.350+0500 I NETWORK  [conn3] end connection 127.0.0.1:62704 (0 connections now open)
+2016-09-15T15:47:00.702+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62711 #4 (1 connection now open)
+2016-09-15T15:47:53.109+0500 I NETWORK  [conn4] end connection 127.0.0.1:62711 (0 connections now open)
+2016-09-15T15:47:56.594+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62718 #5 (1 connection now open)
+2016-09-15T15:48:31.572+0500 I COMMAND  [conn5] command massive_attack.users command: find { find: "users", filter: { email: "sharafatali0972@gmail.com" }, limit: 1, batchSize: 1, singleBatch: true } planSummary: IXSCAN { email: 1 } keysExamined:1 docsExamined:1 cursorExhausted:1 keyUpdates:0 writeConflicts:0 numYields:1 nreturned:1 reslen:299 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } } } protocol:op_query 279ms
+2016-09-15T15:49:09.909+0500 I NETWORK  [conn5] end connection 127.0.0.1:62718 (0 connections now open)
+2016-09-15T15:49:12.879+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62727 #6 (1 connection now open)
+2016-09-15T15:57:32.340+0500 I NETWORK  [conn6] end connection 127.0.0.1:62727 (0 connections now open)
+2016-09-15T16:07:11.629+0500 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2016-09-15T16:07:11.637+0500 I FTDC     [serviceStopWorker] Shutting down full-time diagnostic data capture
+2016-09-15T16:07:11.675+0500 I CONTROL  [serviceStopWorker] now exiting
+2016-09-15T16:07:11.675+0500 I NETWORK  [serviceStopWorker] shutdown: going to close listening sockets...
+2016-09-15T16:07:11.675+0500 I NETWORK  [serviceStopWorker] closing listening socket: 608
+2016-09-15T16:07:11.675+0500 I NETWORK  [serviceStopWorker] shutdown: going to flush diaglog...
+2016-09-15T16:07:11.676+0500 I NETWORK  [serviceStopWorker] shutdown: going to close sockets...
+2016-09-15T16:07:11.676+0500 I STORAGE  [serviceStopWorker] WiredTigerKVEngine shutting down
+2016-09-15T16:07:12.096+0500 I STORAGE  [serviceStopWorker] shutdown: removing fs lock...
+2016-09-15T16:07:12.096+0500 I CONTROL  [serviceStopWorker] dbexit:  rc: 49

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="69a169f5-4140-4c3c-91b4-25587ff42b73" name="pikpak" url="http://pikpak.co">
+        <fileTransfer host="pikpak.co" port="21" password="dfeedfcfdfdcdfcfdfc6dfc5dfdadfcfdfd8dfeadf98df9adf9bdf9c" username="webdevlog@pikpak.co">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

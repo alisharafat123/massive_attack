@@ -9,7 +9,9 @@ var errorhandler = require('errorhandler');
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var passport = require('passport')
-    , OAuthStrategy = require('passport-oauth').OAuthStrategy;
+    , OAuthStrategy = require('passport-oauth').OAuthStrategy,
+    FacebookStrategy  =     require('passport-facebook').Strategy;
+var config  =     require('./config/config');
 var bodyParser = require('body-parser');
 var users = require('./controllers/users_controller.js');
 var MongoClient = mongodb.MongoClient;
@@ -37,7 +39,12 @@ var routes = require('./routes');
 //var user = require('./user');
 // Use connect method to connect to the Server
 module.exports = app;
-
+passport.serializeUser(function(user, done) {
+    done(null, user);
+});
+passport.deserializeUser(function(obj, done) {
+    done(null, obj);
+});
 // Config
 app.set('port', process.env.PORT || 3000);
 /*app.use(express.static(__dirname + '/public'));
@@ -65,20 +72,34 @@ app.use(session({
     },
     secret: 'MySecret'
 }));
-passport.use('provider', new OAuthStrategy({
-        requestTokenURL: 'https://www.facebook.com/oauth/?response_type=code&client_id=1703946223264507&redirect_uri=CALLBACK_URL&scope=read',
-        accessTokenURL: 'https://www.facebook.com/oauth/access_token',
-        userAuthorizationURL: 'https://www.facebook.com/oauth/authorize',
-        consumerKey: '123-456-789',
-        consumerSecret: 'shhh-its-a-secret',
-        callbackURL: 'http://localhost:3000/dashboard'
+
+passport.use(new FacebookStrategy({
+        clientID: config.facebook_api_key,
+        clientSecret:config.facebook_api_secret ,
+        callbackURL: config.callback_url
     },
-    function(token, tokenSecret, profile, done) {
-        users.findOrCreate(function(err, user) {
-            done(err, user);
+    function(accessToken, refreshToken, profile, done) {
+        process.nextTick(function () {
+            //Check whether the User exists or not using profile.id
+            //Further DB code.
+            return done(null, profile);
         });
     }
 ));
+//passport.use('provider', new OAuthStrategy({
+//        requestTokenURL: 'https://www.facebook.com/oauth/?response_type=code&client_id=1703946223264507&redirect_uri=CALLBACK_URL&scope=read',
+//        accessTokenURL: 'https://www.facebook.com/oauth/access_token',
+//        userAuthorizationURL: 'https://www.facebook.com/oauth/authorize',
+//        consumerKey: '123-456-789',
+//        consumerSecret: 'shhh-its-a-secret',
+//        callbackURL: 'http://localhost:3000/dashboard'
+//    },
+//    function(token, tokenSecret, profile, done) {
+//        users.findOrCreate(function(err, user) {
+//            done(err, user);
+//        });
+//    }
+//));
 
 //app.use(express.bodyParser());
 
@@ -132,6 +153,16 @@ app.get('/auth/provider', passport.authenticate('provider'));
 app.get('/auth/provider/callback',
     passport.authenticate('provider', { successRedirect: '/',
         failureRedirect: '/login' }));
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', {
+        successRedirect : '/dashboard',
+        failureRedirect: '/login'
+    }),
+    function(req, res) {
+        res.redirect('/');
+    });
 //app.get('/dashboard', routes.dashboard);
 //var u = new user();
 //console.log(u);

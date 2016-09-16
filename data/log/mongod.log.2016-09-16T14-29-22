@@ -1,0 +1,117 @@
+2016-09-16T13:34:00.818+0500 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2016-09-16T13:34:00.819+0500 I STORAGE  [thread1] Service running
+2016-09-16T13:34:00.889+0500 I CONTROL  [initandlisten] MongoDB starting : pid=1944 port=27017 dbpath=E:\Sharafat\massive_attack\data\db 64-bit host=DESKTOP-DG5HRQH
+2016-09-16T13:34:00.889+0500 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] db version v3.2.9
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] git version: 22ec9e93b40c85fc7cae7d56e7d6a02fd811088c
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] modules: none
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten] build environment:
+2016-09-16T13:34:00.890+0500 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2016-09-16T13:34:00.891+0500 I CONTROL  [initandlisten]     distarch: x86_64
+2016-09-16T13:34:00.891+0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-09-16T13:34:00.891+0500 I CONTROL  [initandlisten] options: { config: "C:\Program Files\MongoDB\mongod.cfg", service: true, storage: { dbPath: "E:\Sharafat\massive_attack\data\db" }, systemLog: { destination: "file", path: "E:\Sharafat\massive_attack\data\log\mongod.log" } }
+2016-09-16T13:34:01.256+0500 I -        [initandlisten] Detected data files in E:\Sharafat\massive_attack\data\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-09-16T13:34:01.333+0500 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-09-16T13:34:09.452+0500 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-09-16T13:34:09.452+0500 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'E:/Sharafat/massive_attack/data/db/diagnostic.data'
+2016-09-16T13:34:09.726+0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-09-16T13:42:13.168+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49863 #1 (1 connection now open)
+2016-09-16T14:04:49.076+0500 I NETWORK  [conn1] end connection 127.0.0.1:49863 (0 connections now open)
+2016-09-16T14:05:03.430+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50136 #2 (1 connection now open)
+2016-09-16T14:12:01.331+0500 I NETWORK  [conn2] end connection 127.0.0.1:50136 (0 connections now open)
+2016-09-16T14:12:06.674+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50211 #3 (1 connection now open)
+2016-09-16T14:21:50.243+0500 I NETWORK  [conn3] end connection 127.0.0.1:50211 (0 connections now open)
+2016-09-16T14:21:53.653+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50251 #4 (1 connection now open)
+2016-09-16T14:30:05.331+0500 I NETWORK  [conn4] end connection 127.0.0.1:50251 (0 connections now open)
+2016-09-16T14:30:11.475+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50316 #5 (1 connection now open)
+2016-09-16T14:53:29.028+0500 I NETWORK  [conn5] end connection 127.0.0.1:50316 (0 connections now open)
+2016-09-16T14:53:32.018+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50503 #6 (1 connection now open)
+2016-09-16T15:03:12.036+0500 I NETWORK  [conn6] end connection 127.0.0.1:50503 (0 connections now open)
+2016-09-16T15:03:15.692+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50587 #7 (1 connection now open)
+2016-09-16T15:08:22.306+0500 I NETWORK  [conn7] end connection 127.0.0.1:50587 (0 connections now open)
+2016-09-16T15:08:25.321+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50794 #8 (1 connection now open)
+2016-09-16T15:10:00.306+0500 I NETWORK  [conn8] end connection 127.0.0.1:50794 (0 connections now open)
+2016-09-16T15:10:04.920+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50809 #9 (1 connection now open)
+2016-09-16T15:11:12.274+0500 I NETWORK  [conn9] end connection 127.0.0.1:50809 (0 connections now open)
+2016-09-16T15:11:15.309+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50833 #10 (1 connection now open)
+2016-09-16T15:13:01.026+0500 I NETWORK  [conn10] end connection 127.0.0.1:50833 (0 connections now open)
+2016-09-16T15:13:03.670+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50843 #11 (1 connection now open)
+2016-09-16T15:13:53.506+0500 I NETWORK  [conn11] end connection 127.0.0.1:50843 (0 connections now open)
+2016-09-16T15:13:57.172+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50851 #12 (1 connection now open)
+2016-09-16T15:14:39.139+0500 I NETWORK  [conn12] end connection 127.0.0.1:50851 (0 connections now open)
+2016-09-16T15:14:42.181+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50860 #13 (1 connection now open)
+2016-09-16T15:16:37.426+0500 I NETWORK  [conn13] end connection 127.0.0.1:50860 (0 connections now open)
+2016-09-16T15:16:40.380+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50868 #14 (1 connection now open)
+2016-09-16T15:17:15.298+0500 I NETWORK  [conn14] end connection 127.0.0.1:50868 (0 connections now open)
+2016-09-16T15:17:17.914+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50875 #15 (1 connection now open)
+2016-09-16T15:23:55.250+0500 I NETWORK  [conn15] end connection 127.0.0.1:50875 (0 connections now open)
+2016-09-16T15:23:59.870+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50908 #16 (1 connection now open)
+2016-09-16T15:26:02.929+0500 I NETWORK  [conn16] end connection 127.0.0.1:50908 (0 connections now open)
+2016-09-16T15:26:08.999+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50922 #17 (1 connection now open)
+2016-09-16T15:48:18.324+0500 I NETWORK  [conn17] end connection 127.0.0.1:50922 (0 connections now open)
+2016-09-16T15:48:21.379+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51063 #18 (1 connection now open)
+2016-09-16T15:52:42.353+0500 I NETWORK  [conn18] end connection 127.0.0.1:51063 (0 connections now open)
+2016-09-16T15:52:47.468+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51099 #19 (1 connection now open)
+2016-09-16T15:53:11.185+0500 I NETWORK  [conn19] end connection 127.0.0.1:51099 (0 connections now open)
+2016-09-16T15:53:15.523+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51112 #20 (1 connection now open)
+2016-09-16T15:53:46.513+0500 I NETWORK  [conn20] end connection 127.0.0.1:51112 (0 connections now open)
+2016-09-16T15:53:49.305+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51119 #21 (1 connection now open)
+2016-09-16T15:54:55.777+0500 I NETWORK  [conn21] end connection 127.0.0.1:51119 (0 connections now open)
+2016-09-16T15:55:01.632+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51128 #22 (1 connection now open)
+2016-09-16T16:00:20.770+0500 I NETWORK  [conn22] end connection 127.0.0.1:51128 (0 connections now open)
+2016-09-16T16:02:52.556+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51212 #23 (1 connection now open)
+2016-09-16T16:04:24.851+0500 I NETWORK  [conn23] end connection 127.0.0.1:51212 (0 connections now open)
+2016-09-16T16:04:31.999+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51239 #24 (1 connection now open)
+2016-09-16T16:05:44.801+0500 I NETWORK  [conn24] end connection 127.0.0.1:51239 (0 connections now open)
+2016-09-16T16:05:50.052+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51253 #25 (1 connection now open)
+2016-09-16T16:07:45.953+0500 I NETWORK  [conn25] end connection 127.0.0.1:51253 (0 connections now open)
+2016-09-16T16:07:49.032+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51264 #26 (1 connection now open)
+2016-09-16T16:08:45.601+0500 I NETWORK  [conn26] end connection 127.0.0.1:51264 (0 connections now open)
+2016-09-16T16:10:05.072+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51291 #27 (1 connection now open)
+2016-09-16T16:13:47.169+0500 I NETWORK  [conn27] end connection 127.0.0.1:51291 (0 connections now open)
+2016-09-16T16:13:53.624+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51310 #28 (1 connection now open)
+2016-09-16T16:14:44.162+0500 I NETWORK  [conn28] end connection 127.0.0.1:51310 (0 connections now open)
+2016-09-16T16:14:48.123+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51339 #29 (1 connection now open)
+2016-09-16T16:15:52.560+0500 I NETWORK  [conn29] end connection 127.0.0.1:51339 (0 connections now open)
+2016-09-16T16:15:55.815+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51365 #30 (1 connection now open)
+2016-09-16T16:16:25.825+0500 I NETWORK  [conn30] end connection 127.0.0.1:51365 (0 connections now open)
+2016-09-16T16:18:39.768+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51386 #31 (1 connection now open)
+2016-09-16T16:20:35.569+0500 I NETWORK  [conn31] end connection 127.0.0.1:51386 (0 connections now open)
+2016-09-16T16:20:39.831+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51408 #32 (1 connection now open)
+2016-09-16T16:29:26.515+0500 I NETWORK  [conn32] end connection 127.0.0.1:51408 (0 connections now open)
+2016-09-16T16:29:29.346+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51483 #33 (1 connection now open)
+2016-09-16T16:32:20.273+0500 I NETWORK  [conn33] end connection 127.0.0.1:51483 (0 connections now open)
+2016-09-16T16:32:23.521+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51501 #34 (1 connection now open)
+2016-09-16T16:34:01.664+0500 I NETWORK  [conn34] end connection 127.0.0.1:51501 (0 connections now open)
+2016-09-16T16:34:06.441+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51526 #35 (1 connection now open)
+2016-09-16T16:59:42.942+0500 I NETWORK  [conn35] end connection 127.0.0.1:51526 (0 connections now open)
+2016-09-16T16:59:53.465+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52055 #36 (1 connection now open)
+2016-09-16T17:01:13.441+0500 I NETWORK  [conn36] end connection 127.0.0.1:52055 (0 connections now open)
+2016-09-16T17:01:18.410+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52087 #37 (1 connection now open)
+2016-09-16T17:03:12.752+0500 I NETWORK  [conn37] end connection 127.0.0.1:52087 (0 connections now open)
+2016-09-16T17:03:15.603+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52100 #38 (1 connection now open)
+2016-09-16T17:11:08.434+0500 I NETWORK  [conn38] end connection 127.0.0.1:52100 (0 connections now open)
+2016-09-16T17:11:13.019+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52129 #39 (1 connection now open)
+2016-09-16T17:15:52.512+0500 I NETWORK  [conn39] end connection 127.0.0.1:52129 (0 connections now open)
+2016-09-16T17:15:55.574+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52159 #40 (1 connection now open)
+2016-09-16T17:24:46.081+0500 I NETWORK  [conn40] end connection 127.0.0.1:52159 (0 connections now open)
+2016-09-16T17:24:52.486+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52217 #41 (1 connection now open)
+2016-09-16T17:27:03.040+0500 I NETWORK  [conn41] end connection 127.0.0.1:52217 (0 connections now open)
+2016-09-16T17:27:06.206+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52229 #42 (1 connection now open)
+2016-09-16T17:42:56.192+0500 I NETWORK  [conn42] end connection 127.0.0.1:52229 (0 connections now open)
+2016-09-16T17:42:59.474+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52372 #43 (1 connection now open)
+2016-09-16T17:44:25.583+0500 I NETWORK  [conn43] end connection 127.0.0.1:52372 (0 connections now open)
+2016-09-16T18:08:11.410+0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53209 #44 (1 connection now open)
+2016-09-16T19:19:09.454+0500 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2016-09-16T19:19:09.500+0500 I FTDC     [serviceStopWorker] Shutting down full-time diagnostic data capture
+2016-09-16T19:19:09.651+0500 I CONTROL  [serviceStopWorker] now exiting
+2016-09-16T19:19:09.651+0500 I NETWORK  [serviceStopWorker] shutdown: going to close listening sockets...
+2016-09-16T19:19:09.652+0500 I NETWORK  [serviceStopWorker] closing listening socket: 604
+2016-09-16T19:19:09.667+0500 I NETWORK  [serviceStopWorker] shutdown: going to flush diaglog...
+2016-09-16T19:19:09.667+0500 I NETWORK  [serviceStopWorker] shutdown: going to close sockets...
+2016-09-16T19:19:09.668+0500 I NETWORK  [conn44] end connection 127.0.0.1:53209 (0 connections now open)
+2016-09-16T19:19:09.681+0500 I STORAGE  [serviceStopWorker] WiredTigerKVEngine shutting down
+2016-09-16T19:19:10.135+0500 I STORAGE  [serviceStopWorker] shutdown: removing fs lock...
+2016-09-16T19:19:10.136+0500 I CONTROL  [serviceStopWorker] dbexit:  rc: 49

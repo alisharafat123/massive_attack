@@ -14,6 +14,23 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" type="text/css"/><![endif]-->
 </head>
 <body class="landing">
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1703946223264507',
+            xfbml      : true,
+            version    : 'v2.7'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -70,7 +87,9 @@
      <!-- Main -->
     <section class="container-dashboard">
         <div id="app" class="app" data-reactid=".0.0.0.0">
-                <div data-reactid=".0.0.0.0.0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div data-reactid=".0.0.0.0.0">
                     <div class="explore-header" data-reactid=".0.0.0.0.0.0">
                         <div class="dashboard-header logged-out" data-reactid=".0.0.0.0.0.0.0">
                     <div class="container" data-reactid=".0.0.0.0.0.0.0.0">
@@ -247,7 +266,15 @@
     </div>
     </div>
                </div>
-         </div>
+                </div>
+                </div>
+            <div class="row">
+                <div class="col-md-6">
+                 <div class="shared-zap-card" style="background-color:#3b5998;" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches"><h2 class="shared-zap-title" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.0">Share Facebook Page posts on another Facebook Page</h2><div class="shared-zap-app-logos" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.1"><div class="FacebookV2API128x128 PlaceholderAPI128x128 app-logo img128 shared-zap__app-logo" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.1.0"></div><span class="zap-plus" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.1.1">+</span><div class="FacebookV2API128x128 PlaceholderAPI128x128 app-logo img128 shared-zap__app-logo" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.1.2"></div></div><div class="shared-zap-footer" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.2"><span class="shared-zap-label" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.2.0"><i class="icon icon-bolt" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.2.0.0"></i><span data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.2.0.1"> Popular Zap</span></span>
+                     <a href="/auth/provider" target="_blank" class="button shared-zap-card-button" style="cursor:pointer;" data-reactid=".0.0.0.0.0.2.0.0.0.0.1.1.$/app/min/2458/start-perfect-matches.2.1">Use this Zap</a></div></div>
+                </div>
+          </div>
+       </div>
   </section>
 </div>
 

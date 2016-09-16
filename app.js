@@ -7,7 +7,9 @@ var http = require('http');
 var path = require('path');
 var errorhandler = require('errorhandler');
 var mongodb = require('mongodb');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var passport = require('passport')
+    , OAuthStrategy = require('passport-oauth').OAuthStrategy;
 var bodyParser = require('body-parser');
 var users = require('./controllers/users_controller.js');
 var MongoClient = mongodb.MongoClient;
@@ -63,6 +65,21 @@ app.use(session({
     },
     secret: 'MySecret'
 }));
+passport.use('provider', new OAuthStrategy({
+        requestTokenURL: 'https://www.facebook.com/oauth/?response_type=code&client_id=1703946223264507&redirect_uri=CALLBACK_URL&scope=read',
+        accessTokenURL: 'https://www.facebook.com/oauth/access_token',
+        userAuthorizationURL: 'https://www.facebook.com/oauth/authorize',
+        consumerKey: '123-456-789',
+        consumerSecret: 'shhh-its-a-secret',
+        callbackURL: 'http://localhost:3000/dashboard'
+    },
+    function(token, tokenSecret, profile, done) {
+        users.findOrCreate(function(err, user) {
+            done(err, user);
+        });
+    }
+));
+
 //app.use(express.bodyParser());
 
 /*app.set('view engine', 'ejs');
@@ -111,7 +128,10 @@ app.get('/login', users.login);
 app.get('/logout', users.logout);
 app.get('/contact', routes.contact);
 app.get('/dashboard', users.dashboard);
-
+app.get('/auth/provider', passport.authenticate('provider'));
+app.get('/auth/provider/callback',
+    passport.authenticate('provider', { successRedirect: '/',
+        failureRedirect: '/login' }));
 //app.get('/dashboard', routes.dashboard);
 //var u = new user();
 //console.log(u);

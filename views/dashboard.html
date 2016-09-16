@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/app-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/logos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" type="text/css"/><![endif]-->
 </head>
 <body class="landing">
@@ -17,14 +20,237 @@
     <header id="header">
         <h1><a href="/">Massive</a> Attack</h1>
         <nav id="nav">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="contact">Contact</a></li>
-                <!--<li><a href="register" class="button">Sign Up</a></li>-->
-                <li>{{username}}</li>
+            <div class="navbar-header">
+                <button id="pancake" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    MENU
+                </button>
+            </div>
+            <ul class="nav navbar-nav custom-nav-clr navbar-right">
+                <li>
+                <div class="notification"></div>
+                <a href="#" class="notification-link" id="notificationLink"><i class="fa fa-bell"></i></a>
+                <!--<div id="notificationContainer">
+                    <div id="notificationTitle">Notifications</div>
+                    <div id="notificationsBody" class="notifications">
+                        &lt;!&ndash;<div class="row notificationItem"><div class="col-lg-12"><img style="margin-left: auto; margin-right: auto; display: block;" src="<?php echo base_url() ?>images/loader.GIF" /></div></div>&ndash;&gt;
+                    </div>
+                    <div id="notificationFooter">&lt;!&ndash;<a href="#">See All</a>&ndash;&gt; </div>
+                </div>-->
+                </li>
+                <li>
+                    <div class="message-notification"></div>
+                    <a href="#"><i class="fa fa-envelope-o"></i></a>
+                </li>
+                <li class="nav-pic-li">
+                    <a href="dashboard" class="no-padding-top-bottom" style="padding-top: 10px; padding-bottom: 0px;">
+                        <img src="images/default-profile33x33.png" class="nav-pic">
+
+                        {{username}}
+
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                                        <span class=" dropdown-toggle caret caret-size clr-drop"  id="menu1" data-toggle="dropdown">
+                                            </span>
+                        <ul class="dropdown-menu drop-menu-clr text-center" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard"><i class="fa fa-dashboard mar-right"></i>DASHBOARD</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="profile"><i class="fa fa-user mar-right"></i>PROFILE</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-cog mar-right"></i>SETTINGS</a></li>
+
+                            <li><a href="logout"><i class="fa fa-power-off mar-right"></i>LOG OUT</a></li>
+                        </ul>
+                    </div></li>
+
             </ul>
         </nav>
     </header>
+     <!-- Main -->
+    <section class="container-dashboard">
+        <div id="app" class="app" data-reactid=".0.0.0.0">
+                <div data-reactid=".0.0.0.0.0">
+                    <div class="explore-header" data-reactid=".0.0.0.0.0.0">
+                        <div class="dashboard-header logged-out" data-reactid=".0.0.0.0.0.0.0">
+                    <div class="container" data-reactid=".0.0.0.0.0.0.0.0">
+                        <h2 class="explore-header-logged-out" data-reactid=".0.0.0.0.0.0.0.0.0">
+                            <div type="search" class="icon icon--search icon-search" data-reactid=".0.0.0.0.0.0.0.0.0.0"></div>
+                            <span data-reactid=".0.0.0.0.0.0.0.0.0.1">Pick Apps to Explore Workflow Ideas</span>
+                        </h2>
+                    </div>
+                </div>
+                    </div>
+                    <div data-reactid=".0.0.0.0.0.1">
+                <div class="explore-app-search container" data-reactid=".0.0.0.0.0.1.0">
+                    <div class="explore-app-search__search-container" data-reactid=".0.0.0.0.0.1.0.0">
+                        <div class="explore-app-search__search" data-reactid=".0.0.0.0.0.1.0.0.0">
+                            <div type="search" class="icon icon--search icon-search" data-reactid=".0.0.0.0.0.1.0.0.0.0">
+
+                            </div>
+                            <input class="explore-app-search__search-input" placeholder="Search for any app name …" value="" data-reactid=".0.0.0.0.0.1.0.0.0.1">
+                        </div>
+                        <div class="explore-app-search__dropdown" data-reactid=".0.0.0.0.0.1.0.0.1">
+                            <p class="explore-app-search__dropdown-item explore-app-search__dropdown-item--start" data-reactid=".0.0.0.0.0.1.0.0.1.0">
+                                <span class="explore-app-search__dropdown-label" data-reactid=".0.0.0.0.0.1.0.0.1.0.0">
+                                    <span data-reactid=".0.0.0.0.0.1.0.0.1.0.0.0">Sort By</span><span data-reactid=".0.0.0.0.0.1.0.0.1.0.0.1">:</span>
+                                </span>
+                                <span data-reactid=".0.0.0.0.0.1.0.0.1.0.1">Popular</span>
+                            </p>
+                            <div type="arrow-down" class="icon icon--arrow-down icon-arrow-down" data-reactid=".0.0.0.0.0.1.0.0.1.1">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explore-app-search__apps-container" data-reactid=".0.0.0.0.0.1.0.1">
+                        <div class="explore-app-search__apps-list" data-reactid=".0.0.0.0.0.1.0.1.0">
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleSheetsAPI">
+                                <div class="GoogleSheetsAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleSheetsAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleSheetsAPI.2">Google Sheets</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleMailV2API">
+                                <div class="GoogleMailV2API128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleMailV2API.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleMailV2API.2">Gmail</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$TrelloAPI">
+                                <div class="PlaceholderAPI128x128 TrelloAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$TrelloAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$TrelloAPI.2">Trello</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleCalendarAPI">
+                                <div class="GoogleCalendarAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleCalendarAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleCalendarAPI.2">Google Calendar</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$SlackDevAPI">
+                                <div class="PlaceholderAPI128x128 SlackDevAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$SlackDevAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$SlackDevAPI.2">Slack</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$MailChimpAPI">
+                                <div class="MailChimpAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$MailChimpAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$MailChimpAPI.2">MailChimp</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$EvernoteAPI">
+                                <div class="EvernoteAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$EvernoteAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$EvernoteAPI.2">Evernote</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$TwitterV2API">
+                                <div class="PlaceholderAPI128x128 TwitterV2API128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$TwitterV2API.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$TwitterV2API.2">Twitter</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$TypeformDevAPI">
+                                <div class="PlaceholderAPI128x128 TypeformDevAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$TypeformDevAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$TypeformDevAPI.2">Typeform</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$FacebookV2API">
+                                <div class="FacebookV2API128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$FacebookV2API.1"></div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$FacebookV2API.2">Facebook Pages</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$AsanaDevAPI">
+                                <div class="AsanaDevAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$AsanaDevAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$AsanaDevAPI.2">Asana</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleDriveAPI">
+                                <div class="GoogleDriveAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleDriveAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleDriveAPI.2">Google Drive</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$DropBoxAPI">
+                                <div class="DropBoxAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$DropBoxAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$DropBoxAPI.2">Dropbox</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$SalesforceAPI">
+                                <span class="tag premium" title="" data-reactid=".0.0.0.0.0.1.0.1.0.$SalesforceAPI.0">Premium</span>
+                                <div class="PlaceholderAPI128x128 SalesforceAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$SalesforceAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$SalesforceAPI.2">Salesforce</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$RSSAPI">
+                                <div class="PlaceholderAPI128x128 RSSAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$RSSAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$RSSAPI.2">RSS by Zapier</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$WebHookAPI">
+                                <div class="PlaceholderAPI128x128 WebHookAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$WebHookAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$WebHookAPI.2">Webhooks by Zapier</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$ZapierMailAPI">
+                                <div class="PlaceholderAPI128x128 ZapierMailAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$ZapierMailAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$ZapierMailAPI.2">Email by Zapier</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$PipedriveDevAPI">
+                                <div class="PipedriveDevAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$PipedriveDevAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$PipedriveDevAPI.2">Pipedrive</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$WordpressV2API">
+                                <div class="PlaceholderAPI128x128 WordpressV2API128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$WordpressV2API.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$WordpressV2API.2">WordPress</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$WufooAPI">
+                                <div class="PlaceholderAPI128x128 WufooAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$WufooAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$WufooAPI.2">Wufoo</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleContactsV2API">
+                                <div class="GoogleContactsV2API128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleContactsV2API.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$GoogleContactsV2API.2">Google Contacts</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$IMAPAPI">
+                                <div class="IMAPAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$IMAPAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$IMAPAPI.2">IMAP by Zapier</p>
+                            </div>
+                            <div class="explore-app-search__app-list-item" data-reactid=".0.0.0.0.0.1.0.1.0.$ActiveCampaignDevAPI">
+                                <div class="ActiveCampaignDevAPI128x128 PlaceholderAPI128x128 app-logo explore-app-search__app-list-icon img128" data-reactid=".0.0.0.0.0.1.0.1.0.$ActiveCampaignDevAPI.1">
+
+                                </div>
+                                <p class="explore-app-search__app-list-name" data-reactid=".0.0.0.0.0.1.0.1.0.$ActiveCampaignDevAPI.2">ActiveCampaign</p>
+                            </div>
+            <span class="blog-card__date" data-reactid=".0.0.0.0.0.3.0.0.$GoogleMailV2API.1.$535.2.1.1">January 26, 2016</span>
+    </div>
+    </div>
+    </div>
+    </div>
+               </div>
+         </div>
+  </section>
+</div>
+
 <footer id="footer">
     <ul class="icons">
         <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -45,6 +271,7 @@
 <script src="assets/js/jquery.scrollgress.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script src="assets/js/app.js"></script>
 <script src="assets/js/ie/respond.min.js"></script>
 <script src="assets/js/main.js"></script>
 

@@ -1,0 +1,115 @@
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
+    max-height: 500px;
+
+}
+.text-center-for-tablet{
+    display: inline-block;
+}
+.navbar-inverse .custom-nav-clr li > a {
+    color: #ffffff;
+    font-weight:700;
+    font-size:15px;
+}
+
+.navbar-inverse .custom-nav-clr li > a:active {
+    color: #ef9b35 !important;
+    background-color: transparent !important;
+}
+
+.navbar-nav li > a:hover {
+    color:#ef9b35 !important;
+    background-color: transparent !important;
+}
+
+.nav-border-right {
+    border-right: 1px solid #ffffff;
+    height: 25px;
+}
+
+.nav-pic {
+    height: 33px;
+    width: 33px;
+    margin-right: 8px;
+    border: 2px solid white;
+    border-radius: 16px;
+    background: white;
+}
+
+.nav-pic-li {
+    height: 50px;
+}
+.caret-size {
+    cursor: pointer;
+    border-top: 7px solid;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+.clr-drop {
+    color: #ffffff;
+    margin-top: 5px;
+}
+.dropdown .drop-menu-clr {
+    margin-top: 23px;
+}
+.dropdown-menu > li > a{
+    color: rgb(79, 79, 79) !important;
+}
+.dropdown .drop-menu-clr li > a {
+    color: rgb(79, 79, 79) !important;
+}
+
+.dropdown .drop-menu-clr li > a:hover {
+    color: #000000 !important;
+}
+
+ul > li {
+    position: relative;
+}
+.close{
+    display:block !important;
+}
+ul > li:first-child {
+    margin-left: 0;
+}
+
+ul > li:last-child {
+    margin-right: 0;
+}
+
+.dropdown .drop-menu-clr {
+    margin-top: 23px;
+}
+
+.dropdown .drop-menu-clr li > a {
+    color: rgb(79, 79, 79);
+}
+
+.dropdown .drop-menu-clr li > a:hover {
+    color: #000000;
+}
+
+.mar-right {
+    margin-right: 5px;
+}
+
+.dropdown-menu{
+    right: 0 !important;
+    left: auto !important;
+    top: 71% !important;
+}
+@media ( max-width: 995px ) {
+    .navbar-inverse .sm-screen-pad li > a {
+        padding: 15px 7px;
+    }
+    .user-round-image{
+        width: 150px;
+
+    }
+    .text-center-for-tablet{
+        text-align: center;
+    }
+
+    .input-status-message {
+        max-width: 225px;
+    }
+}

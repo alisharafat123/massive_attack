@@ -2,21 +2,37 @@
 var express = require('express');
 var crypto = require("crypto");
 var router = express.Router();
+var session = require('express-session');
 var app = express();
 var  expressValidator = require('express-validator');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
-
+//app.set('trust proxy', 1); // trust first proxy
+app.use(session({
+    store: '',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 36000000,
+        httpOnly: false // <- set httpOnly to false
+    },
+    secret: 'MySecret'
+}));
 var user = require("../models/users.js");
 var UserModel = new user();
 exports.register = function(req, res) {
 
     if(req.method.toLowerCase() != "post") {
-        res.render('register', {
-            'error_email': '',
-            'errors' : ''
-        });
+        if(!req.session.email) {
+            res.render('register', {
+                'error_email': '',
+                'errors' : ''
+            });
+        }
+        else {
+            res.redirect('/dashboard');
+        }
     }
     else {
         var password = req.body.password;
@@ -82,7 +98,12 @@ exports.register = function(req, res) {
 exports.login = function(req, res) {
 
     if(req.method.toLowerCase() != "post") {
-        res.render("login.html", {layout: false});
+        if(!req.session.email) {
+            res.render("login.html", {layout: false});
+        }
+        else {
+            res.redirect('/dashboard');
+        }
     }
     else {
         user.findOne({email: req.body.username}, function(err, result) {
@@ -99,7 +120,7 @@ exports.login = function(req, res) {
         });
 
         function auth( userRes ) {
-            console.log(userRes.password);
+            //console.log(userRes.password);
             if(UserModel.encrypt(req.body.password) != userRes.password) {
                 res.render('login',
                     {
@@ -107,9 +128,8 @@ exports.login = function(req, res) {
                     });
             } else {
                 var sess = req.session;
-                //console.log(userRes._id);
-                sess.email=req.body.email;
-                console.log(sess.email);
+                sess.email=userRes.username;
+                req.session.save();
                 user.update({_id : userRes._id}, {'$set' : {token : Date.now}});
                 if(userRes){
                     "use strict";
@@ -120,4 +140,31 @@ exports.login = function(req, res) {
             }
         }
     }
+};
+
+exports.dashboard=function (req, res) {
+    console.log(req.session.email);
+    if(req.session.email){
+        res.render('dashboard',{
+            'username': req.session.email
+        });
+    }
+    else {
+        res.redirect('/login');
+    }
+
+};
+
+exports.logout=function (req, res) {
+    console.log(req.session.email);
+    if(req.session.destroy()){
+
+        res.redirect('/login');
+    }
+    else {
+        res.render('dashboard',{
+            'username': req.session.email
+        });
+    }
+
 };

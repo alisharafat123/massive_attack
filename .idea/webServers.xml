@@ -9,6 +9,20 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="f14181d5-4743-4642-9670-80a1fcb66556" name="gamban" url="http://gamban.com">
+        <fileTransfer host="gamban.com" port="21" password="df9edfd9dfc6dfcbdfd9dfc2df9bdf98df99df9e" username="update">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="23254b67-f796-4e95-868f-35e1239458c8" name="cnerr" url="http://cnerr.de">
+        <fileTransfer host="cnerr.de" port="21" password="df95df9edf9cdfe3df9bdfdedfdadfcb" username="cnerrftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

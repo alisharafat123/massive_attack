@@ -52,7 +52,17 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: 'ssshhhhh'}));
+//app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+    store: '',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 36000000,
+        httpOnly: false // <- set httpOnly to false
+    },
+    secret: 'MySecret'
+}));
 //app.use(express.bodyParser());
 
 /*app.set('view engine', 'ejs');
@@ -98,23 +108,9 @@ app.use(expressValidator());
 app.get('/', routes.index);
 app.get('/register', users.register);
 app.get('/login', users.login);
+app.get('/logout', users.logout);
 app.get('/contact', routes.contact);
-var sess;
-
-app.get('/dashboard',function(req,res){
-    sess = req.session;
-//Session set when user Request our app via URL
-    if(sess.email) {
-        /*
-         * This line check Session existence.
-         * If it existed will do some action.
-         */
-        res.redirect('/dashboard');
-    }
-    else {
-        res.redirect('/login');
-    }
-});
+app.get('/dashboard', users.dashboard);
 
 //app.get('/dashboard', routes.dashboard);
 //var u = new user();

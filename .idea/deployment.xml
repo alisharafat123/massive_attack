@@ -2,6 +2,20 @@
 <project version="4">
   <component name="PublishConfigData" serverName="pikpak">
     <serverData>
+      <paths name="cnerr">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="gamban">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="pikpak">
         <serverdata>
           <mappings>

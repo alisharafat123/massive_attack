@@ -19,7 +19,7 @@
       <webServer id="23254b67-f796-4e95-868f-35e1239458c8" name="cnerr" url="http://cnerr.de">
         <fileTransfer host="cnerr.de" port="21" password="df95df9edf9cdfe3df9bdfdedfdadfcb" username="cnerrftp">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
